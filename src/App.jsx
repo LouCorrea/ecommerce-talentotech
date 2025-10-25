@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AuthProvider } from './context/AuthContext'
 import { ToastContainer, toast } from 'react-toastify'
 
-import Navigation     from './components/Navigation.jsx'
+import Navigation from './components/Navigation.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
-import Home           from './pages/Home.jsx'
-import CartPage       from './pages/CartPage.jsx'
-import ProductDetail  from './pages/ProductDetail.jsx'
-import Login          from './pages/Login.jsx'
-import Footer         from './components/Footer.jsx'
+import Home from './pages/Home.jsx'
+import CartPage from './pages/CartPage.jsx'
+import ProductDetail from './pages/ProductDetail.jsx'
+import Login from './pages/Login.jsx'
+import Footer from './components/Footer.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'react-toastify/dist/ReactToastify.css'
@@ -74,7 +74,7 @@ function App() {
             <Route path="/login" element={<Login />} />
           </Routes>
         </div>
-        
+
         {!isLogin && <Footer />}
       </div>
     )
@@ -84,7 +84,7 @@ function App() {
     <AuthProvider>
       <Router>
         <AppRoutes />
-        <ToastContainer 
+        <ToastContainer
           position="top-right"
           autoClose={2000}
           hideProgressBar={false}
